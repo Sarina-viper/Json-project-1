@@ -1,0 +1,33 @@
+import json
+
+team_data_json = """
+{
+  "department": "Engineering",
+  "manager": "Alice Brown",
+  "employees": [
+    {
+      "name": "Bob Johnson",
+      "role": "Senior Developer"
+    },
+    {
+      "name": "Charlie Davis",
+      "role": "Junior Developer"
+    },
+    {
+      "name": "Diana Miller",
+      "role": "QA Engineer"
+    }
+  ]
+}
+"""
+
+data= json.loads(team_data_json)
+print(data)
+count =0
+for x in data["employees"]:
+    count =+1
+    print(x["name"])
+    print(x["role"])
+    
+manager = data["manager"]
+print(manager)
